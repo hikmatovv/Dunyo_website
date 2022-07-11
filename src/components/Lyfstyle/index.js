@@ -1,12 +1,12 @@
-import "./index.css";
 import React from "react";
 import { Box, Container, Stack, Typography,Button,CardMedia,Card } from "@mui/material";
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import MadaniyatA from "./MadaniyatA";
 import Footer from "../Footer/Footer";
+import "./index.css"
+import Lyfstyle from "./Lyfstyle";
 
 export default () => {
   return (
@@ -42,15 +42,12 @@ export default () => {
       <CardMedia
         component="img"
         height="100"
-        image="img.jpg"
+        image="img.png"
       />
       </Card>
-
-      <MadaniyatA />
+        <Lyfstyle />
       <Footer />
       </Container>
-      {/* Rustama  aka sizniki shet footer bilan
-    madaniyat lifstayl sport ham sizga hammasi bir xil faqat datasi boshqa  */}
     </>
   );
 };
