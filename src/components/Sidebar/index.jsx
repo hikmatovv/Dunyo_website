@@ -34,11 +34,13 @@ import ResponsiveDriwer from "./ResponsiveDrawer";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ClearIcon from "@mui/icons-material/Clear";
 
-const drawerWidth = 350;
+// const drawerWidthLeft = 350;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const drawerWidth = mobileOpen ? "100%" : 350;
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
