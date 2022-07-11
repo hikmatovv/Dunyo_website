@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import Modal from "@mui/material/Modal";
 import Grid from "@mui/material/Grid"
+import TextField from "@mui/material/TextField"
 const style = {
   position: "absolute",
   top: "50%",
@@ -349,7 +350,7 @@ export default () => {
                 >
                   <SearchIcon onClick={handleOpen} />
                 </Link>
-                {/* <Modal
+                <Modal
                   open={open}
                   onClose={handleClose}
                   aria-labelledby="modal-modal-title"
@@ -373,7 +374,7 @@ export default () => {
                     <TextField id="standard-basic"  variant="standard" />
                     </Typography>
                   </Box>
-                </Modal> */}
+                </Modal>
               </Typography>
             </Box>
 
@@ -388,7 +389,7 @@ export default () => {
             >
               <MenuIcon />
             </IconButton>
-            <Modal
+            {/* <Modal
   open={open}
   onClose={handleClose1}
   aria-labelledby="modal-modal-title"
@@ -411,7 +412,7 @@ export default () => {
 
   </Grid>
 
-</Modal>
+</Modal> */}
           </Box>
           </Toolbar>
         </Container>
