@@ -3,40 +3,31 @@ import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-// import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
-// import List from "@mui/material/List";
-// import ListItem from "@mui/material/ListItem";
-// import ListItemButton from "@mui/material/ListItemButton";
-// import ListItemIcon from "@mui/material/ListItemIcon";
-// import ListItemText from "@mui/material/ListItemText";
-// import MailIcon from "@mui/icons-material/Mail";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-
-import Madaniyat from "../Madaniyat";
-import Navbar from "../Navbar";
-import HomeNews from "../Homenews";
-import Kommunistlar from "../Kommunistlar";
-import Mahalliy from "../Mahalliy";
-
-// import Weather from "./Weather";
 import News from "./data.jsx";
 import ResponsiveDriwer from "./ResponsiveDrawer";
-
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ClearIcon from "@mui/icons-material/Clear";
+import Navbar from '../Navbar'
+import Toolbar from '@mui/material/Toolbar';
 
-// const drawerWidthLeft = 350;
 
 function ResponsiveDrawer(props) {
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -61,28 +52,12 @@ function ResponsiveDrawer(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 0, display: { sm: "none", md: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Grid position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1,width:'100%' }}>
+       
+
+          <Navbar/>
+      
+      </Grid>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 9 } }}
@@ -154,6 +129,7 @@ function ResponsiveDrawer(props) {
           open
         >
           <Toolbar />
+          <Toolbar />
           <h4
             style={{
               // borderBottom: "1px solid #ccc",
@@ -180,11 +156,7 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar />
-        <Madaniyat />
-        <Navbar />
-        <HomeNews />
-        <Kommunistlar />
-        <Mahalliy />
+        
       </Box>
     </Box>
   );
