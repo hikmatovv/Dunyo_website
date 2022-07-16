@@ -7,6 +7,7 @@ import DataBase from './data'
 import Button from '@mui/material/Button';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import RefreshIcon from '@mui/icons-material/Refresh';
+import Footer from '../Footer/Footer'
 import "./style.css"
 
 
@@ -30,7 +31,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default () => {
   return (
     <div>
-      <Box>
+      <Box mt='8%'>
         <Grid container>
           <Grid xs={12}>
             <Item sx={{ padding: "0px" }}>
@@ -203,7 +204,7 @@ export default () => {
             </Item>
           </Grid>
         </Grid>
-      <Grid container sx={{marginTop:"2%"}}>
+      <Grid container >
         <Grid xs={12}>
           <Item sx={{justifyContent:"center",display:"flex",padding:"0px",alignItems:"center"}}>
           <Button variant="contained" sx={{width:"100%", height:"80px", backgroundColor:"white",color:"black",":hover":{backgroundColor:"black",color:"white"}}}> <RefreshIcon/> KO‘PROQ YANGILIKLARNI YUKLASH</Button>
@@ -211,163 +212,7 @@ export default () => {
         </Grid>
       </Grid>
       </Box>
-      {/* <Box sx={{ flexGrow: 0 }}>
-        <Grid container sx={{ marginTop: "1%" }}>
-          <Grid xs={12}>
-            <Item2 sx={{ textAlign: "center", padding: "0px", }}>
-              <Item2 sx={{ padding: "0px" }} >
-                <img style={{ width: "100%" }} src="https://daryo.uz/cache/2022/07/medium-photo_2021-10-29_12-47-13-1-1280x853.jpg" alt="" />
-          <Grid container sx={{ marginTop: "-20.9%" }}>
-            <Grid xs={12}>
-              <Item sx={{ background: "none", backgroundColor: "#FFFFFF", opacity: "0.5" }}>
-                <Item2 sx={{ paddingLeft: "3%", background: "none" }}><span style={{ borderLeft: "4px solid #66CCFF", paddingLeft: "10px" }}>MASLAR</span></Item2>
-                <Item2 sx={{ fontSize: "140%", height: "150px", wordSpacing: "5px", color: "black", fontWeight: "700", ":hover": { color: "#66CCFF", transition: "0.3s" }, background: "none" }}>Nima sababdan uyqudan keyin bosh og‘riydi: sabablar va yechimlar</Item2>
-                <Item2 sx={{ background: "none" }}>
-                  <Grid container>
-                    <Grid xs={6}>
-                      <Item2 sx={{ background: "none" }}>Bugun, 09:32</Item2>
-                    </Grid>
-                    <Grid xs={6}>
-                      <Item2 sx={{ display: "flex", alignItems: "center", justifyContent: "right", background: "none" }}> <RemoveRedEyeOutlinedIcon /> 9719</Item2>
-                    </Grid>
-                  </Grid>
-                </Item2>
-              </Item>
-            </Grid>
-          </Grid>
-              </Item2>
-            </Item2>
-
-
-          </Grid>
-          
-          
-          <Grid xs={12} sm={4}>
-            <Item >
-              <Item2 sx={{ padding: "0px" }}><img src="https://daryo.uz/cache/2022/07/thumb-photo_2022-07-05_09-59-53-680x422-680x422.jpg" style={{ width: "100%", height: "40vh" }} alt="" /></Item2>
-              <Item2 sx={{ paddingLeft: "3%" }}><span style={{ borderLeft: "4px solid #66CCFF", paddingLeft: "10px" }}>MASLAHATLAR</span></Item2>
-              <Item2 sx={{ fontSize: {md:"140%",sm:"100%"},paddingBottom:{md:"39%"}, wordSpacing: "5px", color: "black", fontWeight: "700", ":hover": { color: "#66CCFF", transition: "0.3s" } }}>Nima sababdan uyqudan keyin bosh og‘riydi: sabablar va yechimlar</Item2>
-              <Item2>
-                <Grid container>
-                  <Grid xs={6}>
-                    <Item2>Bugun, 09:32</Item2>
-                  </Grid>
-                  <Grid xs={6}>
-                    <Item2 sx={{ display: "flex", alignItems: "center", justifyContent: "right" }}> <RemoveRedEyeOutlinedIcon /> 9719</Item2>
-                  </Grid>
-                </Grid>
-              </Item2>
-            </Item>
-          </Grid>
-
-
-        </Grid>
-        <Grid container>
-          <Grid xs={12}>
-            <Item sx={{ marginTop: "1%" }}>
-              <Item2 sx={{ paddingLeft: "1%" }}><span style={{ borderLeft: "4px solid #66CCFF", paddingLeft: "10px" }}>MAHALLIY</span></Item2>
-              <Item2 sx={{ fontSize: "140%", height: "100px", wordSpacing: "5px", color: "black", fontWeight: "700", ":hover": { color: "#66CCFF", transition: "0.3s" } }}>
-                O‘zbekistonda 10-iyul kuni qanday ob-havo bo‘lishi ma’lum qilindi
-                <div style={{ marginTop: "1%", fontWeight: "500" }}>
-                  Shu kuni Farg‘ona vodiysi viloyatining ba’zi joylarida qisqa muddatli yomg‘ir yog‘ishi, momaqaldiroq bo‘lishi mumkin
-                </div>
-              </Item2>
-              <Item2>
-                <Grid container>
-                  <Grid xs={6}>
-                    <Item2>Bugun, 09:32</Item2>
-                  </Grid>
-                  <Grid xs={6}>
-                    <Item2 sx={{ display: "flex", alignItems: "center", justifyContent: "right" }}> <RemoveRedEyeOutlinedIcon /> 9719</Item2>
-                  </Grid>
-                </Grid>
-              </Item2>
-            </Item>
-          </Grid>
-        </Grid>
-
-        <Item2>
-          <Grid container>
-            <Grid xs={12}>
-              <Item>
-                <Grid container sx={{display:"flex",alignItems:"center"}}>
-                  <Grid xs={3}>
-                    <Item2 sx={{ padding: "0px" }}>
-                      <Item2>
-                        <img style={{ width: "100%" }} src="https://daryo.uz/static/2022/07/thumb-photo_2022-07-10_08-53-17-1.jpg" alt="" />
-                      </Item2>
-                      </Item2>
-                  </Grid>
-                  <Grid xs={9}>
-                    <Item2 sx={{ marginTop: "1%" }}>
-                      <Item2 sx={{ paddingLeft: "1%" }}><span style={{ borderLeft: "4px solid #66CCFF", paddingLeft: "10px" }}>MAHALLIY</span></Item2>
-                      <Item2 sx={{ fontSize: "140%", height: "100px", wordSpacing: "5px", color: "black", fontWeight: "700", ":hover": { color: "#66CCFF", transition: "0.3s" } }}>
-                      Toshkent viloyatidagi postda transport vositalarining harakatlanish tartibiga doir yangicha tizim sinovdan o‘tkazilmoqda (video)
-                      </Item2>
-                      <Item2>
-                        <Grid container>
-                          <Grid xs={6}>
-                            <Item2>Bugun, 09:32</Item2>
-                          </Grid>
-                          <Grid xs={6}>
-                            <Item2 sx={{ display: "flex", alignItems: "center", justifyContent: "right" }}> <RemoveRedEyeOutlinedIcon /> 9719</Item2>
-                          </Grid>
-                        </Grid>
-                      </Item2>
-                    </Item2>
-                  </Grid>
-                </Grid>
-              </Item>
-            </Grid>
-          </Grid>
-        </Item2>
-
-        <Item2>
-          <Grid container>
-            <Grid xs={12}>
-              <Item>
-                  
-                <Grid container sx={{display:"flex",alignItems:"center"}}>
-                  <Grid xs={9}>
-                    <Item2 sx={{ marginTop: "1%" }}>
-                      <Item2 sx={{ paddingLeft: "1%" }}><span style={{ borderLeft: "4px solid #66CCFF", paddingLeft: "10px" }}>DUNYO</span></Item2>
-                      <Item2 sx={{ fontSize: "140%", height: "100px", wordSpacing: "5px", color: "black", fontWeight: "600", ":hover": { color: "#66CCFF", transition: "0.3s" } }}>
-                      AQSHning Oklaxoma shtatidagi zavodda portlash yuz berdi
-                      </Item2>
-                      <Item2>
-                        <Grid container>
-                          <Grid xs={6}>
-                            <Item2>Bugun, 09:32</Item2>
-                          </Grid>
-                          <Grid xs={6}>
-                            <Item2 sx={{ display: "flex", alignItems: "center", justifyContent: "right" }}> <RemoveRedEyeOutlinedIcon /> 9719</Item2>
-                          </Grid>
-                        </Grid>
-                      </Item2>
-                    </Item2>
-                  </Grid>
-                  <Grid xs={3}>
-                    <Item2 sx={{ padding: "0px" }}>
-                      <Item2>
-                        <img style={{ width: "100%" }} src="https://daryo.uz/cache/2022/07/thumb-KMO_088197_166657_1_t218-968x544.jpg" alt="" />
-                      </Item2>
-                      </Item2>
-                  </Grid>
-
-                </Grid>
-              </Item>
-            </Grid>
-          </Grid>
-        </Item2>
-        <Grid container>
-          <Grid xs={12}>
-            <Item sx={{justifyContent:"center",display:"flex",padding:"0px",alignItems:"center"}}>
-            <Button variant="contained" sx={{width:"100%", height:"80px", backgroundColor:"white",color:"black",":hover":{backgroundColor:"black",color:"white"}}}> <RefreshIcon/> KO‘PROQ YANGILIKLARNI YUKLASH</Button>
-            </Item>
-          </Grid>
-        </Grid>
-
-      </Box> */}
+      <Footer/>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import Users from "../views/Users/List";
-import Home from "../containers/Home";
+import Home from "../components/Homenews";
 import Sport from "../components/Sport/Sport";
 import Mahalliy from "../components/Mahalliy";
 // import Dunyo  from '../components/Dunyo'
