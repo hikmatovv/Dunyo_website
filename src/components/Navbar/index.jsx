@@ -9,8 +9,8 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import Modal from "@mui/material/Modal";
-import Grid from "@mui/material/Grid"
-import TextField from "@mui/material/TextField"
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 const style = {
   position: "absolute",
   top: "50%",
@@ -23,16 +23,15 @@ const style = {
   backgroundColor: "none",
 };
 const style1 = {
-  position: 'absolute' ,
-  
+  position: "absolute",
+
   // width: "100%",
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   p: 4,
 };
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
-
- 
   const [anchorElNav1, setAnchorElNav1] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -63,13 +62,19 @@ export default () => {
         sx={{
           backgroundColor: "white",
           boxShadow: "none",
-          border: "1px solid #EEE",
+          // border: "1px solid #EEE",
           color: "black",
         }}
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 0 }}>
+            <Box
+              sx={{
+                flexGrow: 0,
+                display: { md: "block", sm: "block", xs: "block" },
+                marginRight: "14%",
+              }}
+            >
               <img
                 src="https://daryo.uz/logo/logo.svg"
                 alt="beta logo bor"
@@ -350,7 +355,7 @@ export default () => {
                 >
                   <SearchIcon onClick={handleOpen} />
                 </Link>
-                <Modal
+                {/* <Modal
                   open={open}
                   onClose={handleClose}
                   aria-labelledby="modal-modal-title"
@@ -370,25 +375,28 @@ export default () => {
                     >
                       Nimani qidiramiz?
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2,textAlign:"center" }}>
-                    <TextField id="standard-basic"  variant="standard" />
+                    <Typography
+                      id="modal-modal-description"
+                      sx={{ mt: 2, textAlign: "center" }}
+                    >
+                      <TextField id="standard-basic" variant="standard" />
                     </Typography>
                   </Box>
-                </Modal>
+                </Modal> */}
               </Typography>
             </Box>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpen}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
+            {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpen}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton> */}
             {/* <Modal
   open={open}
   onClose={handleClose1}
@@ -413,7 +421,7 @@ export default () => {
   </Grid>
 
 </Modal> */}
-          </Box>
+            {/* </Box> */}
           </Toolbar>
         </Container>
       </AppBar>
