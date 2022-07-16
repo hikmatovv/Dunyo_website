@@ -6,6 +6,8 @@ import Sport from "../components/Sport/Sport";
 import Mahalliy from "../components/Mahalliy";
 // import Dunyo  from '../components/Dunyo'
 import Madaniyat from "../components/Madaniyat";
+import Pul from "../components/Pul";
+
 import Lyfstyle from "../components/Lyfstyle/Lyfstyle";
 // import Mahalliy from '../components/Mahalliy'
 import Kolumnistlar from '../components/Kommunistlar'
@@ -17,7 +19,7 @@ export const routes = [
       { index: true, element: <Home /> },
       { path: "/mahalliy", element: <Mahalliy /> },
       // { path: '/dunyo', element: <Dunyo /> },
-      // { path: '/pul', element: <Pul /> },
+      { path: '/pul', element: <Pul /> },
       { path: "/madaniyat", element: <Madaniyat /> },
       { path: "/lifestyle", element: <Lyfstyle /> },
       { path: "/sport", element: <Sport /> },
