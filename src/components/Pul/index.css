@@ -1,0 +1,10 @@
+/* Bu style yozish uchun */
+
+*{
+    box-sizing: border-box;
+}
+
+ .example:hover{
+    background: black;
+    color: white;
+ } 
