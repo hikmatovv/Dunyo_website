@@ -9,7 +9,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import data from "../../Data/mahalliy.json"
+import data from "../../Data/pul.json"
 import "./index.css"
 export default () => {
   return (
