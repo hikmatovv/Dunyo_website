@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Box from "@mui/material/Box";
@@ -30,33 +31,33 @@ const Footer = () => {
               Daryo{" "}
             </Typography>
             <hr></hr>
-            <Typography>Internet - Nashr </Typography>
-            <Typography>Tahririyat haqida </Typography>
-            <Typography>Aloqa ma'lumotlari </Typography>
-            <Typography>Foydalanish shartlari </Typography>
-            <Typography>Maxfiylik Siyosati</Typography>
-            <Typography>Yangiliklar arxivi </Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Internet - Nashr </Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Tahririyat haqida </Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Aloqa ma'lumotlari </Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Foydalanish shartlari </Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Maxfiylik Siyosati</Typography>
+            <Typography sx={{':hover': {cursor: 'pointer', color: '#ccc',  transition: '0.5s ease'}}}>Yangiliklar arxivi </Typography>
           </Grid>
           <Grid md={3} sm={6} xs={12} sx={{ padding: "2%", gap: "1rem" }}>
-            <Typography variant="h5" sx={{ color: "white" }}>
+            <Typography variant="h5" sx={{ color: "white" }} >
               Reklama
             </Typography>
             <hr></hr>
-            <Typography>Reklama joylashtirish </Typography>
-            <Typography>Reklama materiallariga </Typography>
-            <Typography>qo'yiladigan texnik talablar </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Reklama joylashtirish </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Reklama materiallariga </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >qo'yiladigan texnik talablar </Typography>
           </Grid>
           <Grid md={3} sm={6} xs={12} sx={{ padding: "2%", gap: "1rem" }}>
             <Typography variant="h5" sx={{ color: "white" }}>
               Ijtimoiy Tarmoqlar
             </Typography>
             <hr></hr>
-            <Typography>Instagramm | Rasmiy </Typography>
-            <Typography>Instagramm | Lifestyle </Typography>
-            <Typography>Instagramm | Sport </Typography>
-            <Typography>Facebook | Rasmiy </Typography>
-            <Typography>Ok | Rasmiy </Typography>
-            <Typography>YouTube</Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Instagramm | Rasmiy </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Instagramm | Lifestyle </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Instagramm | Sport </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Facebook | Rasmiy </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >Ok | Rasmiy </Typography>
+            <Typography  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >YouTube</Typography>
           </Grid>
           <Grid
             md={3}
@@ -64,26 +65,26 @@ const Footer = () => {
             xs={12}
             sx={{ padding: "2%", gap: "1rem", pb: "5%" }}
           >
-            <Typography variant="h5" sx={{ color: "white" }}>
+            <Typography variant="h5" sx={{ color: "white" }} >
               Telegramm - Kanallar
             </Typography>
             <hr></hr>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2"  sx={{':hover': {cursor: 'pointer', color: '#ccc', transition: '0.5s ease'}}} >
               Daryo - Daryo” internet-nashrining matbuot va axborot agentligi{" "}
             </Typography>
           </Grid>

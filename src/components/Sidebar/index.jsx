@@ -12,12 +12,13 @@ import News from "./data.jsx";
 import ResponsiveDriwer from "./ResponsiveDrawer";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ClearIcon from "@mui/icons-material/Clear";
-import Navbar from '../Navbar'
-import Toolbar from '@mui/material/Toolbar';
+import Navbar from "../Navbar";
+import Toolbar from "@mui/material/Toolbar";
+import { Typography } from "@mui/material";
 
+import MenuIcon from "@mui/icons-material/Menu";
 
 function ResponsiveDrawer(props) {
-
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -52,15 +53,40 @@ function ResponsiveDrawer(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <Grid position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1,width:'100%' }}>
-       
+      {/* <Grid
+        position="fixed"
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, width: "100%" }}
+      >
+        <Navbar />
+      </Grid> */}
 
-          <Navbar/>
-      
-      </Grid>
+      <AppBar
+        position="fixed"
+        sx={{
+          width: { sm: "100%", md: "100%" },
+          ml: { sm: `${drawerWidth}px` },
+          backgroundColor: "white",
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          // width: "100%",
+        }}
+      >
+        <Toolbar>
+          <IconButton
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "block", md: "none" }, color: "black" }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            <Navbar />
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 9 } }}
+        sx={{ width: { sm: "100%", md: drawerWidth }, flexShrink: { sm: 9 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -73,15 +99,28 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none", md: "none" },
+            display: { xs: "block", sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
             },
           }}
         >
-          <Grid container spacing={3}>
-            <Grid item xs={6}>
+          <Grid
+            container
+            spacing={3}
+            sx={{ justifyContent: "space-between" }}
+            className="mx-auto"
+          >
+            <Grid
+              item
+              xs={6}
+              sx={{
+                zIndex: (theme) => theme.zIndex.drawer + 2,
+                width: "100%",
+                marginTop: "100px",
+              }}
+            >
               <Item sx={{ fontSize: "13px" }}>
                 <MenuOpenIcon
                   sx={{
@@ -91,21 +130,33 @@ function ResponsiveDrawer(props) {
                 />{" "}
                 MENU
               </Item>
+              {/* <Grid item xs={5} sm={5} md={5}>
+                <Item s>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    edge="start"
+                    onClick={handleDrawerToggle}
+                    sx={{ mr: 2, display: { sm: "block", md: "none" } }}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Item>
+              </Grid> */}
             </Grid>
             <Grid item xs>
               <Item>
                 <IconButton
-                  color="inherit"
                   aria-label="open drawer"
                   edge="start"
                   onClick={handleDrawerToggle}
                   sx={{
-                    display: { sm: "none", md: "none" },
-                    position: "relative",
-                    // bottom: "4px",
+                    display: { xs: "block", sm: "block", md: "none" },
                     ":hover": {
                       backgroundColor: "white",
+                      cursor: "pointer",
                     },
+                    color: "black",
                   }}
                 >
                   <ClearIcon />
@@ -119,7 +170,7 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: "none", sm: "block", md: "block" },
+            display: { xs: "none", sm: "none", md: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -129,6 +180,13 @@ function ResponsiveDrawer(props) {
           open
         >
           <Toolbar />
+          {/* <Box sx={{ flexGrow: 0 }}>
+              <img
+                src="https://daryo.uz/logo/logo.svg"
+                alt="beta logo bor"
+                style={{ width: "170px" }}
+              />
+            </Box> */}
           <Toolbar />
           <h4
             style={{
@@ -156,7 +214,6 @@ function ResponsiveDrawer(props) {
         }}
       >
         {/* <Toolbar /> */}
-        
       </Box>
     </Box>
   );
