@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 export default  (props)=> {
     const theme = useTheme();
 
@@ -27,7 +28,7 @@ export default  (props)=> {
           <Typography mt='5%' component="div" sx={{fontWeight:"700",fontSize:"12px",}}  color="text.secondary" >
          {props.val}
           </Typography>
-        </CardContent>
+       <VisibilityOutlinedIcon/> </CardContent>
        
       </Box>
       <CardMedia

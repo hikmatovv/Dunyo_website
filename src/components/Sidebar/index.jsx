@@ -12,12 +12,10 @@ import News from "./data.jsx";
 import ResponsiveDriwer from "./ResponsiveDrawer";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ClearIcon from "@mui/icons-material/Clear";
-import Navbar from '../Navbar'
-import Toolbar from '@mui/material/Toolbar';
-
+import Navbar from "../Navbar";
+import Toolbar from "@mui/material/Toolbar";
 
 function ResponsiveDrawer(props) {
-
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -31,7 +29,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const drawerWidth = mobileOpen ? "100%" : 350;
+  const drawerWidth = mobileOpen ? "100%" : 420;
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -52,13 +50,14 @@ function ResponsiveDrawer(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <Grid position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1,width:'100%' }}>
-       
-
-          <Navbar/>
-      
+      <Grid
+        position="fixed"
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, width: "100%" }}
+      >
+        <Navbar />
       </Grid>
       <Box
+      mt='5%'
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 9 } }}
         aria-label="mailbox folders"
@@ -116,36 +115,40 @@ function ResponsiveDrawer(props) {
           <ResponsiveDriwer />{" "}
           {/* bu yerda responsive paytida yangiliklar import boladi */}
         </Drawer>
-        <Drawer
+        <Grid
           variant="permanent"
           sx={{
             display: { xs: "none", sm: "block", md: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: "#f1f1f1",
+              // backgroundColor: "#f1f1f1",
             },
+            width: "420px",
+            height: "1000px",
+            overflow: "scroll",
+            position: "fixed",
           }}
           open
         >
           <Toolbar />
-          <Toolbar />
-          <h4
+          {/* <Toolbar /> */}
+          {/* <h4
             style={{
-              // borderBottom: "1px solid #ccc",
+              borderBottom: "1px solid #ccc",
               padding: "0px 0px 0px 48px",
               fontWeight: "600",
               color: "#3e3e3e",
-              // position: "relative",
-              // top: "20px",
-              // width: "80%",
-              // fontSize: "25px",
+              position: "relative",
+              top: "20px",
+              width: "80%",
+              fontSize: "25px",
             }}
           >
             So`nggi yangiliklar
-          </h4>
+          </h4> */}
           <News /> {/* bu yerda yangiliklar import boladi  */}
-        </Drawer>
+        </Grid>
       </Box>
       <Box
         component="main"
@@ -156,7 +159,6 @@ function ResponsiveDrawer(props) {
         }}
       >
         {/* <Toolbar /> */}
-        
       </Box>
     </Box>
   );
