@@ -68,10 +68,24 @@ const New = () => {
 
   return (
     <div>
-      <div>
+      <div style={{ backgroundColor: "#f1f1f1", border: "1px solid gray" }}>
+        <h4
+          style={{
+            // borderBottom: "1px solid #ccc",
+            padding: "20px 0px 20px 48px",
+            fontWeight: "600",
+            color: "#3e3e3e",
+            // position: "relative",
+            // top: "20px",
+            // width: "80%",
+            // fontSize: "25px",
+          }}
+        >
+          So`nggi yangiliklar
+        </h4>
         {data.map((val) => {
           return (
-            <div style={{}}>
+            <div>
               {/* <h1>{val.type}</h1>
               <h1>{val.new}</h1>
             <h1>{val.date}</h1> */}
@@ -81,8 +95,8 @@ const New = () => {
                   sx={{
                     ":hover": {
                       backgroundColor: "white",
-                      transition: "0.4s ease",
-                      // boxShadow: "0px 0px 0px 1px gray",
+                      transition: "0.1s ease",
+                      // border: "1px solid gray",
                     },
                     borderTop: "1px solid #ccc",
                   }}
@@ -94,7 +108,7 @@ const New = () => {
                         fontSize: 14,
                         borderLeft: "3px solid red",
                         padding: "4px",
-                        lineHeight: "30px",
+                        // lineHeight: "30px",
                         ":hover": {
                           cursor: "pointer",
                           color: "red",
