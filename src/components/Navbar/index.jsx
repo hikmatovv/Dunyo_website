@@ -9,8 +9,8 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import Modal from "@mui/material/Modal";
-import Grid from "@mui/material/Grid"
-import TextField from "@mui/material/TextField"
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 const style = {
   position: "absolute",
   top: "50%",
@@ -23,16 +23,14 @@ const style = {
   backgroundColor: "none",
 };
 const style1 = {
-  position: 'absolute' ,
-  
+  position: "absolute",
+
   // width: "100%",
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   p: 4,
 };
 export default () => {
-
- 
   const [anchorElNav1, setAnchorElNav1] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -370,26 +368,29 @@ export default () => {
                     >
                       Nimani qidiramiz?
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2,textAlign:"center" }}>
-                    <TextField id="standard-basic"  variant="standard" />
+                    <Typography
+                      id="modal-modal-description"
+                      sx={{ mt: 2, textAlign: "center" }}
+                    >
+                      <TextField id="standard-basic" variant="standard" />
                     </Typography>
                   </Box>
                 </Modal>
               </Typography>
             </Box>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpen}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            {/* <Modal
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpen}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              {/* <Modal
   open={open}
   onClose={handleClose1}
   aria-labelledby="modal-modal-title"
@@ -413,7 +414,7 @@ export default () => {
   </Grid>
 
 </Modal> */}
-          </Box>
+            </Box>
           </Toolbar>
         </Container>
       </AppBar>
