@@ -22,11 +22,13 @@ import Footer from "../Footer/Footer";
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import Card1 from "./Card/index"
+
 import "./index.css"
 const Sport = () => {
   return (
     <>
-          <Container sx={{mt:"5%"}}
+          <Container sx={{mt:"8%"}}
 
 >
   <Stack spacing={2} sx={{width:"100%",border:"1px solid blue" ,height:"4rem"}}>
@@ -63,47 +65,13 @@ const Sport = () => {
 
 </Container>
 
-      <Paper sx={{ mt: "5%" }}>
-        {dba &&
-          dba.map((dba) => {
-            return (
-              <Paper elevation={4}>
-                <Container>
-                  <Grid container rowSpacing={4}>
-                    <Grid md={6} sm={5} xs={12}>
-                      <br />
-                      <Typography variant="h5" sx={{ color: "orange" }}>
-                        | {dba.text}
-                      </Typography>
-                      <p>{dba.desc}</p>
-                      <p>{dba.val}</p>
-                    </Grid>
-                    <Grid md={6} sm={5} xs={12}>
-                      <Card
-                        sx={{ width: "60%", mt: "2%", mb: "1%", ml: "25%" }}
-                        ml={{ lg: "17rem", md: "11rem", sm: "8rem" }}
-                      >
-                        <CardMedia
-                          component="img"
-                          height="170"
-                          image={dba.img}
-                        />
-                      </Card>
-                      <List>
-                        <ListItem>
-                          <ListItemIcon>
-                            <RemoveRedEyeOutlinedIcon />
-                          </ListItemIcon>
-                          <ListItemText primary="1924" />
-                        </ListItem>
-                      </List>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </Paper>
-            );
-          })}
-      </Paper>
+      <Grid sx={{ mt: "5%" }}>
+      {dba.map((val)=> {
+    return <Card1 text={val.text} desc={val.desc} img={val.img} val={val.val}/>
+  }
+    )}
+      
+      </Grid>
       <Box
         className="example"
         sx={{

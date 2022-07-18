@@ -67,7 +67,7 @@ export default () => {
           color: "black",
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 0 }}>
               <img
@@ -96,7 +96,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/mahalliy"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     MAHALIY
@@ -126,7 +126,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/dunyo"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     DUNYO
@@ -156,7 +156,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/pul"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     PUL
@@ -186,7 +186,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/madaniyat"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     MADANIYAT
@@ -216,7 +216,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/lifestyle"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     LAYFSTAYL
@@ -246,7 +246,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/sport"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     SPORT
@@ -268,7 +268,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/multimedia"
                     style={{ color: "#8e8e8e", textDecoration: "none" }}
                   >
                     MULTIMEIA
@@ -290,7 +290,7 @@ export default () => {
                   }}
                 >
                   <Link
-                    to=""
+                    to="/kolumnistlar"
                     style={{ color: "#8e8e8e", textDecoration: "none" }}
                   >
                     KOLUMNISTLAR

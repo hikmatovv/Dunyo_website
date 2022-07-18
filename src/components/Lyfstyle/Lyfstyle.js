@@ -8,51 +8,19 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import Card1 from "./Card/index"
+
 
 const Lyfstyle = () => {
   
   return (
     <>
-    <Paper sx={{ mt: "5%" }}>
-        {dbs &&
-          dbs.map((dbs) => {
-            return (
-                <Paper elevation={4}>
-                    <Container>
-              <Grid container rowSpacing={4}>
-                <Grid md={6} sm={5} xs={12}><br />
-                  <Typography variant="h5" sx={{color:"orange"}}>| {dbs.text}</Typography>
-                  <p>{dbs.desc}</p>
-                  <p>{dbs.val}</p>
-                </Grid>
-                <Grid md={6} sm={5} xs={12}>
-
-                <Card sx={{ width:"70%",mt:"2%",mb:"1%",ml:"25%"}}
-                ml={{lg:"15rem",md:"11rem",sm:"8rem"}}
-                >
-      <CardMedia
-        component="img"
-        height="150"
-        image={dbs.img}
-        />
-      </Card>
-      <List>
-                  <ListItem >
-                      <ListItemIcon>
-                        <RemoveRedEyeOutlinedIcon />
-                      </ListItemIcon>
-                      <ListItemText primary="1924" />
-                  </ListItem>
-</List>
-
-
-                </Grid>
-              </Grid>
-              </Container>
-              </Paper>
-            );
-          })}
-    </Paper>
+    <Grid sx={{ mt: "5%" }}>
+    {dbs.map((val)=> {
+    return <Card1 text={val.text} desc={val.desc} img={val.img} val={val.val}/>
+  }
+    )}
+    </Grid>
           <Box className="example" sx={{mt:"1%",mb:"1%",textAlign:"center",border:"1px solid red"}}>
             <Button className="example" sx={{width:"100%",height:"4rem",color:"black"}}><Forward5Icon /> Ko'proq yangiliklarni yuklash</Button>
           </Box>
